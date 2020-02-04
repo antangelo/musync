@@ -15,6 +15,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation "io.reactivex.rxjava3:rxjava:3.0.0-RC9"
+	testCompile "org.mockito:mockito-core"
+	testImplementation('junit:junit')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

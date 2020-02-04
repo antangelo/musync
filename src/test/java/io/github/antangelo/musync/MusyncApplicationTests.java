@@ -1,21 +1,17 @@
 package io.github.antangelo.musync;
 
 import io.github.antangelo.musync.status.StatusController;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
 
-@SpringBootTest
+@RunWith(MockitoJUnitRunner.class)
 class MusyncApplicationTests
 {
 	@Test
-	void contextLoads()
+	void testStatusPage()
 	{
-	}
-
-	@Test
-	void statusTest()
-	{
-		Assert.hasLength(new StatusController().health());
+		Assert.assertEquals(new StatusController().health(), "OK");
 	}
 }
