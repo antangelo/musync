@@ -5,5 +5,5 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - ./build/classes/main/java:/code
-    command: ['java', '-jar', '/code/musync-0.0.1.jar']
+      - ./build/libs:/code
+    command: ['sh', '-c', "java -jar /code/musync-*.jar"]
