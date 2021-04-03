@@ -1,9 +1,0 @@
-version: '2.0'
-services:
-  musync-be:
-    image: "openjdk:8u242"
-    ports:
-      - '8080:8080'
-    volumes:
-      - ./build/libs:/code
-    command: ['sh', '-c', "java -jar /code/musync-*.jar"]
