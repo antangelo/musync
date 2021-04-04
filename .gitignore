@@ -12,6 +12,8 @@ musync
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# Internal config
+.env
 
 ### VS Code ###
 .vscode/
